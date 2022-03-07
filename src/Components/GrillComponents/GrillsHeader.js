@@ -8,17 +8,16 @@ const myStyles = makeStyles((theme) => ({
     backgroundPosition:"center",
     backgroundSize:"cover",
     backgroundRepeat:"no-repeat",
-    marginTop:"6.4em",
     [theme.breakpoints.down('sm')]:{
         fontSize:"0px",
-    }
+    },
   },
   background_Colors:{
     background:"#00000070",
 
   },
   main_Header_Shop_content:{
-    maxWidth:"800px",
+    maxWidth:"990px",
     color:"#fff",
     margin:"auto",
     paddingTop:"6em",

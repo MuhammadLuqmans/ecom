@@ -1,4 +1,4 @@
-import { Grid ,Box,Button,Link, Typography } from '@material-ui/core'
+import { Grid ,Box,Button,Link, Typography, TextField } from '@material-ui/core'
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -13,6 +13,9 @@ const myStyles = makeStyles((theme)=>({
     },
     Footer_wrapper:{
         color:"#fff",
+        maxWidth:'1360px',
+        margin:'auto',
+        padding:'16px',
     },
     footer_title:{
         fontSize:"36px",
@@ -27,27 +30,27 @@ const myStyles = makeStyles((theme)=>({
         backgroundColor:"#fff",
         borderRadius:5,
         padding:"5px 5px 5px 10px",
-        maxWidth:"310px",
-        display:"flex",
+        maxWidth:"100%",
         justifyContent:"space-between",
-
     },
     input_Button:{
         backgroundColor:"red !important",
         color:"#fff",
         fontWeight:"600",
-        padding:"6px 10px",
-        width:"182px",
+        padding:"10px 10px",
+        width:"100%",
         border:"2px solid red",
         borderRadius:"5px",
-        position:'static',
     },
     input:{
         border:"none",
         fontSize:"16px",
         fontWeight:"500",
         color:"#000",
-        outline:"none",
+        width:'100%',
+        [theme.breakpoints.down('xs')]:{
+            marginBottom:'10px',
+        }
     },
     footer_Icons:{
         alignItems:"center",
@@ -90,8 +93,14 @@ const HomeFooter = () => {
         <Grid item container xs={12}>
         <Grid item xs={12} sm={12} md={4}>
         <Box className={classes.Input_footer}>
-        <input type="text" placeholder='Email Address' className={classes.input} />
+        <Grid item container xs={12} style={{ justifyContent:'space-between', itemAlign:'center'}}>
+        <Grid item xs={12} sm={9}>
+        <TextField  type="text" label='Email Address' className={classes.input} />
+        </Grid>
+        <Grid item xs={12} sm={3}>
         <Button variant='contained' className={classes.input_Button}>Sign up</Button>
+        </Grid>
+        </Grid>
         </Box>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>

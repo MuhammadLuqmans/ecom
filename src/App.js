@@ -1,5 +1,5 @@
 import './App.css';
-import Layout from './Pages/Layout';
+import Layout from './Pages/Routes';
 import {BrowserRouter as Router} from 'react-router-dom'
 // import Menu from './Components/Data/Menu';
 
@@ -9,7 +9,7 @@ function App() {
     <Router>
     <div className="App">
     <Layout />
-    </div>
+    </div> 
     </Router>
   );
 }

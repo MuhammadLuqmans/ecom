@@ -51,15 +51,35 @@ function SendForm() {
           label="Price"
           variant="filled"
           className={classes.product_Inputs}
-
           onChange={(e)=>handleChanges(e)}
         />
         <br />
         <input
           type="text"
-          name="image"
+          name="color"
           id="filled-basic"
           label="Image Url"
+          variant="filled"
+          className={classes.product_Inputs}
+          onChange={(e)=>handleChanges(e)}
+        />
+        <br />
+        <input
+          type="file"
+          name="file"
+          id="filled-basic"
+          label="Product Title"
+          variant="filled"
+          className={classes.product_Inputs}
+
+          onChange={(e)=>handleChanges(e)}
+        />
+        <br />
+        <input
+          type="file"
+          name="file"
+          id="filled-basic"
+          label="Product Title"
           variant="filled"
           className={classes.product_Inputs}
 

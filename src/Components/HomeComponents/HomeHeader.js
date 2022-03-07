@@ -10,7 +10,6 @@ const myStyles = makeStyles((theme)=>({
         height:"550px",
         backgroundPosition:"center",
         backgroundSize:"cover",
-        marginTop:"100px",
         [theme.breakpoints.down('xs')]:{
             height:"350",
         },

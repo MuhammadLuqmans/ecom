@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 
 const myStyles = makeStyles((theme)=>({
     Footer_wrapper:{
+        maxWidth:'1380px',
         padding:"40px 20px",
         backgroundColor:"#fff",
         height:"400px",
         borderTop:"1px solid #d3d0d0",
+        margin:'auto',
     },
     title_Links:{
         textDecoration:"none",

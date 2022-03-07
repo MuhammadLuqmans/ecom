@@ -4,7 +4,7 @@ import React from 'react'
 
 const myStyles = makeStyles((theme)=>({
     header_banner_container:{
-        maxWidth:"1200px",
+        maxWidth:"1290px",
         padding:"0px 20px",
         margin:"auto",
         fontSize:"14px",
@@ -44,11 +44,11 @@ const Header = () => {
         <div className={classes.header_bg}>
         <Grid item container xs={12} className={classes.header_banner_container}>
         <Box className={classes.banner_img_uni_text}>
-        <img src="./assets/Navbar/us.png" alt="flag-aunited state" width="25" height="25" className={classes.banner_img_uni} />       
+        <img src="./assets/Navbar/us.png" alt="flag-aunited state" width="20" height="20" className={classes.banner_img_uni} />       
         <p>United States (EN)</p>
         </Box>
         <Box sx={{ display:"flex"}}>
-        <Link href='#' ><p className={classes.sub_banner_text1}>Store Finder</p></Link>
+        <Link href='/allproducts' ><p className={classes.sub_banner_text1}>Store Finder</p></Link>
         <Link href='#' ><p className={classes.sub_banner_text2}>Register Grill</p></Link>
         </Box>
         </Grid>

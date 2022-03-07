@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Grid } from "@material-ui/core";
+import { AppBar, Box, Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import {
   Charcoal_Grills,
@@ -42,7 +42,7 @@ const myStyles = makeStyles((theme) => ({
     background: "#fff",
     border: "1px solid gray",
     margin: "auto",
-    zIndex: "999",
+    zIndex: "9 !important",
     position: "absolute",
     right: 0,
     top: 101,
@@ -125,6 +125,7 @@ const GrillDropDown = ({CloseBtn}) => {
 
   return (
     <div>
+    <AppBar>
       <div className={classes.Drop_wrapper}>
         <Grid item container xs={12}>
           <Grid item md={3}>
@@ -257,6 +258,7 @@ const GrillDropDown = ({CloseBtn}) => {
           </Grid>
         </Grid>
       </div>
+      </AppBar>
     </div>
   );
 };

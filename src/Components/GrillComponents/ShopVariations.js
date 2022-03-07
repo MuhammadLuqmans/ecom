@@ -2,7 +2,7 @@ import { Box, Button, Card, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useState } from "react";
 import { DataList } from "../Variations/DataList";
-
+import { Link } from "react-router-dom";
 
 const myStyles = makeStyles((theme) => ({
     Variations_wrappers: {
@@ -83,13 +83,13 @@ const myStyles = makeStyles((theme) => ({
         height: "50px",
         width: "80px",
         borderRadius: "5px",
-        position:'static',        
+        position: 'static',
     },
     cardGrids: {
         padding: "10px",
     },
     shop_Layout: {
-        maxWidth: "1300px",
+        maxWidth: "1380px",
         margin: "auto",
         marginTop: "40px",
         padding: "16px",
@@ -204,50 +204,52 @@ const ShopVariations = () => {
                     {cards.map((list) => {
                         return (
                             <Grid item xs={12} sm={12} md={6} lg={4} key={list.id} className={classes.cardGrids}>
-                                <Card className={classes.Shop_Cards}>
-                                    <img
-                                        src={list.img}
-                                        alt="cards assets"
-                                        width="100%"
-                                        className={classes.Card_images}
-                                    />
-                                    <div className={classes.contents_cards}>
-                                        <p className={classes.shop_Card_titles}>{list.title}</p>
-                                        <div className={classes.review_stars}>
-                                            <img
-                                                src="./assets/Grills/Stars.svg"
-                                                alt="stars"
-                                                width="20"
-                                            />
-
-                                            <img
-                                                src="./assets/Grills/Stars.svg"
-                                                alt="stars"
-                                                width="20"
-                                            />
-                                            <img
-                                                src="./assets/Grills/Stars.svg"
-                                                alt="stars"
-                                                width="20"
-                                            />
-                                            <img
-                                                src="./assets/Grills/Stars.svg"
-                                                alt="stars"
-                                                width="20"
-                                            />
-                                        </div>
-                                        <div className={classes.price_and_Cart}>
-                                            <p>$ {list.price}</p>
-                                            <Button className={classes.cart_btn}>
+                                <Link to="/product" >
+                                    <Card className={classes.Shop_Cards}>
+                                        <img
+                                            src={list.img}
+                                            alt="cards assets"
+                                            width="100%"
+                                            className={classes.Card_images}
+                                        />
+                                        <div className={classes.contents_cards}>
+                                            <p className={classes.shop_Card_titles}>{list.title}</p>
+                                            <div className={classes.review_stars}>
                                                 <img
-                                                    src="./assets/Grills/Carts.svg"
-                                                    alt="cart"
-                                                    width="25px"
+                                                    src="./assets/Grills/Stars.svg"
+                                                    alt="stars"
+                                                    width="20"
                                                 />
-                                            </Button>
+
+                                                <img
+                                                    src="./assets/Grills/Stars.svg"
+                                                    alt="stars"
+                                                    width="20"
+                                                />
+                                                <img
+                                                    src="./assets/Grills/Stars.svg"
+                                                    alt="stars"
+                                                    width="20"
+                                                />
+                                                <img
+                                                    src="./assets/Grills/Stars.svg"
+                                                    alt="stars"
+                                                    width="20"
+                                                />
+                                            </div>
+                                            <div className={classes.price_and_Cart}>
+                                                <p>$ {list.price}</p>
+                                                <Button className={classes.cart_btn}>
+                                                    <img
+                                                        src="./assets/Grills/Carts.svg"
+                                                        alt="cart"
+                                                        width="25px"
+                                                    />
+                                                </Button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </Card>
+                                    </Card>
+                                </Link>
                             </Grid>
                         );
                     })}

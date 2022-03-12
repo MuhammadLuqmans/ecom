@@ -29,7 +29,7 @@ const Layout =()=>{
         <Routes>
         <Route excet path='/' element={<Home />}/>
         <Route excet path="/grills" element={<Grills />} />
-        <Route excet path='/add-products' element={<SendForm />}/>
+        <Route excet path='/add-products/:id' element={<SendForm />}/>
         <Route excet path='/all-products' element={<ShowAllPost />}/>
         <Route excet path='/allproducts' element={<AllProducts />} />
         <Route excet path='/plus' element={<Plus />} />

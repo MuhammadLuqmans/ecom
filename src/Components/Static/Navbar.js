@@ -160,7 +160,7 @@ const Navbar = () => {
                     <img src="./assets/Navbar/arrow.svg" alt="arrow" width="12" />{" "}
                   </p>
                 </Link>
-                <Link to="/add-products" className={classes.links_nav}>
+                <Link to="#" className={classes.links_nav}>
                   <p className={classes.nav_link_text}>
                     Accessories
                     <img src="./assets/Navbar/arrow.svg" alt="arrow" width="12" />{" "}

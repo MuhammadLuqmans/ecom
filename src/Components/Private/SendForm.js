@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Grid } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles'
-import { EditeDocs,SendData } from "../../services/Api";
+import { EditeDocs, SendData } from "../../services/Api";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -37,13 +37,13 @@ function SendForm({ match }) {
 
   useEffect(() => {
     const EditeProducts = async () => {
-        let data = await EditeDocs(params.id);
-        setProductData(data)
+      let data = await EditeDocs(params.id);
+      setProductData(data)
     }
     EditeProducts()
-}, [])
+  }, [])
 
-// console.log(productData)
+  // console.log(productData)
 
   const handleChanges = (e) => {
     setProductData({ ...productData, [e.target.name]: e.target.value });

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Home from './Home'
 import Grills from './Grills'
 import { Box } from '@material-ui/core'
@@ -18,6 +18,8 @@ import Product from '../Components/Products/Product'
 
 
 const Layout =()=>{
+    const [ isEditing , setIsEditing ] = useState(false);
+    // console.log(isEditing)
     return(
         <div>
         <div className='DesktopNav'>
@@ -29,8 +31,8 @@ const Layout =()=>{
         <Routes>
         <Route excet path='/' element={<Home />}/>
         <Route excet path="/grills" element={<Grills />} />
-        <Route excet path='/add-products/:id' element={<SendForm />}/>
-        <Route excet path='/all-products' element={<ShowAllPost />}/>
+        <Route excet path='/add-products/:id' element={<SendForm isEditing={ isEditing } setIsEditing={setIsEditing} />}/>
+        <Route excet path='/all-products' element={<ShowAllPost setIsEditing={setIsEditing} />}/>
         <Route excet path='/allproducts' element={<AllProducts />} />
         <Route excet path='/plus' element={<Plus />} />
         <Route path='/product' element={<Product />} />

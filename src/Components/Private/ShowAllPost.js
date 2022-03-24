@@ -3,9 +3,8 @@ import { ReadData, DeleteDocs,EditeDocs  } from '../../services/Api'
 import { Card,Button } from '@material-ui/core';
 import { Link } from 'react-router-dom'
 
-const ShowAllPost = () => {
-    const [Products, setProducts] = useState([])
-    const [ myIds , setMyIds ] = useState('')
+const ShowAllPost = ({ setIsEditing }) => {
+    const [Products, setProducts] = useState([]);
 
     useEffect(() => {
         const GetPost = async () => {
@@ -23,8 +22,7 @@ const ShowAllPost = () => {
 
    const HandleEdite = (ProductId) =>{
     EditeDocs(ProductId);
-    setMyIds(ProductId);
-
+    setIsEditing(true)
    }
 
 //    console.log(myIds)
@@ -42,6 +40,8 @@ const ShowAllPost = () => {
                             <p>{items.dispcription}</p>
                             SKU: {items.sku}
                             <p>Colors: {items.colors}</p>
+                            <p>Category: {items.category}</p>
+                            <p>Date and time: {Date()}</p>
                             <Button variant="contained" color="primary" onClick={()=>HandleDelete(items._id)} >Delete</Button>
                            <Link to={`/add-products/${items._id}`} style={{ textDecoration:'none' }}> <Button variant="contained" color="primary" onClick={()=>HandleEdite(items._id)} >Edite</Button></Link>
                         </Card>
